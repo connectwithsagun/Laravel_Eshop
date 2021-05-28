@@ -382,4 +382,4 @@
     </div>
   </div><!-- az-content -->
 
-  </
+</x-admin.layout>
