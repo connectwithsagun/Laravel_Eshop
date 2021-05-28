@@ -23,6 +23,8 @@
                     <th scope="col" class="sort" data-sort="name">Name</th>
                     <th scope="col" class="sort" data-sort="status">Description</th>
                     <th scope="col" class="sort" data-sort="completion">Price</th>
+      
+
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
@@ -34,9 +36,12 @@
                           <span class="name mb-0 text-sm">{{ $product->id}}</span>
                  
                     </th>
+                
+
                     <td class="budget">
                         {{ $product->product_name}}
                     </td>
+             
                     <td>
                       <span class="badge badge-dot mr-4">
                         <span class="status">{{ substr($product->product_desc,0,50)}}</span>
@@ -45,6 +50,8 @@
                     <td class="budget">
                         {{ $product->price}}
                     </td>
+          
+                 
                     {{-- <td>
                         <a href="/admin/products/edit/{{ $product->id }}">Edit</a>||
                         <a href="/admin/products/delete/{{ $product->id }}">Delete</a>
