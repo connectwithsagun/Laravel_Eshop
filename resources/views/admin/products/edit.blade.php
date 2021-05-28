@@ -3,7 +3,7 @@
         <div class="container">
           <div class="az-content-body">
               <h2>Update Product</h2>
-            <form action="/admin/products/update" method="POST">
+            <form action="/admin/products/update/{{$product->id}}" method="POST">
                 @csrf
                 {{-- <x-forms.input type="text" name="full_name"/> --}}
                 Product Name: <input type="text" name="product_name" id="" class="form-control" value="{{ $product->product_name }}"><br><br>

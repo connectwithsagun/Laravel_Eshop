@@ -164,6 +164,7 @@ Route::get('/admin/products',[App\Http\Controllers\Admin\ProductController::clas
 Route::get('/admin/products/create',[App\Http\Controllers\Admin\ProductController::class,'create'])->name('product_create');
 Route::post('/admin/products/store',[App\Http\Controllers\Admin\ProductController::class,'store']);
 Route::get('/admin/products/edit/{product}',[App\Http\Controllers\Admin\ProductController::class,'edit']);
-Route::get('/admin/products/update',[App\Http\Controllers\Admin\ProductController::class,'update']);
+Route::post('/admin/products/update/{product}',[App\Http\Controllers\Admin\ProductController::class,'update']);
+Route::get('/admin/products/delete/{product}',[App\Http\Controllers\Admin\ProductController::class,'destroy']);
 
 

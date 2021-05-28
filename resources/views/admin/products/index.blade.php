@@ -45,9 +45,13 @@
                     <td class="budget">
                         {{ $product->price}}
                     </td>
-                    <td>
+                    {{-- <td>
                         <a href="/admin/products/edit/{{ $product->id }}">Edit</a>||
-                        <a href="#">Delete</a>
+                        <a href="/admin/products/delete/{{ $product->id }}">Delete</a>
+                    </td> --}}
+                    <td>
+                      <a href="/admin/products/edit/{{ $product->id }}" class="btn btn-xs btn-primary">Edit</a>
+                       <a href="/admin/products/delete/{{ $product->id }}" class="btn btn-xs btn-danger" onclick="return confirm('Are You Sure? Want to Delete It.');">Delete</a> 
                     </td>
                   </tr>
                   @endforeach
