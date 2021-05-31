@@ -57,6 +57,14 @@ class ProductController extends Controller
         $product->product_desc = $request->input('product_desc');
         $product->price = $request->input('price');
         $product->category_id = $request->input('category_id');
+        
+        if ($request->hasFile('image_upload')) {
+            $name = $request->file('image_upload')->getClientOriginalName();
+            $request->file('image_upload')->storeAs('public/images', $name);
+            $product->image = $name;
+        }
+
+
         if($product->save()){
             return redirect()->route('product_list');
         }

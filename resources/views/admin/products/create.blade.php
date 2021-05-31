@@ -16,7 +16,7 @@
 
 
               <h2>Create Product</h2>
-            <form action="/admin/products/store" method="POST">
+            <form action="/admin/products/store" method="POST" enctype="multipart/form-data">
                 @csrf
                 {{-- <x-forms.input type="text" name="full_name"/> --}}
                 Product Name: <input type="text" name="product_name" id="" class="form-control" value="{{ old('product_name') }}">
@@ -55,6 +55,7 @@
                 </select> --}}
 
                 <br><br>
+                <input type="file" name="image_upload" id="">
                 <input type="Submit" name="Submit" value="Save" class="form-control">
             </form>
           </div>
