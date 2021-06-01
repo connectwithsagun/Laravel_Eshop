@@ -61,6 +61,7 @@ class ProductController extends Controller
         if ($request->hasFile('image_upload')) {
             $name = $request->file('image_upload')->getClientOriginalName();
             $request->file('image_upload')->storeAs('public/images', $name);
+            image_crop($name, 550, 750);
             $product->image = $name;
         }
 

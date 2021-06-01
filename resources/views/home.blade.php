@@ -120,8 +120,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="/products/{{ $product->id }}">
-															<img class="default-img" src="{{ $product->image == ' ' ?   'https://via.placeholder.com/550x750' : asset('storage/images/'.$product->image) }}" alt="#">
-															<img class="hover-img" src="{{ $product->image == ' ' ?   'https://via.placeholder.com/550x750' : asset('storage/images/'.$product->image) }}"  alt="#">
+															<img class="default-img" src="{{ $product->image == ' ' ? 'https://via.placeholder.com/550x750': image_crop($product->image) }}" alt="#">
+															<img class="hover-img" src="{{ $product->image == ' ' ? 'https://via.placeholder.com/550x750': asset('storage/images/thumbnail/'.$product->image) }}" alt="#">
 														</a>
 														<div class="button-head">
 															<div class="product-action">
